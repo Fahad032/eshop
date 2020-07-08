@@ -60,42 +60,84 @@ export default function OrderPage() {
             <br />
             <div className="ui basic segment">
               <div className="ui header">Orders</div>
-              <table className="ui celled striped compact table">
-                <thead>
-                  <tr>
-                    <th>Orders No</th>
-                    <th>Delivery Address</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[1, 2, 3].map((i) => {
-                    return (
-                      <tr key={"key" + i}>
-                        <td className="collapsing">
-                          <i className="tags icon"></i> #9675372
-                        </td>
-                        <td>123, Fake Street, Dhaka Bangladesh</td>
-                        <td><label className="ui basic label">Pending</label></td>
-                        <td className="right aligned collapsing">
-                          <button className="ui teal button">
-                            <i className="eye icon"></i>View
-                          </button>
-                          <button className="ui positive button">
-                            <i className="check icon"></i>Deliverd
-                          </button>
-                          <button className="ui negative button">
-                            <i className="close icon"></i>Cancel
-                          </button>
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
+
+              {[1, 2, 3, 4, 5].map((i) => {
+                return (
+                  <div className="order-details">
+                    <div className="ui top attached header">
+                      Order No: #9675372 &nbsp;
+                      <label className="ui right label">Pending</label>
+                      <span style={{ float: "right" }}>
+                        Ordered At: 08/07/2020
+                      </span>
+                    </div>
+
+                    <div className="ui attached segment">
+                      <div className="ui sixteen wide column">
+                        <h3>Shipping Address</h3>
+                        <p>
+                          Office Building, 123, fake street, Dhaka Bangladesh
+                        </p>
+                      </div>
+                      <table className="ui stackable striped compact table">
+                        <thead>
+                          <tr>
+                            <th>ProductID</th>
+                            <th>Product</th>
+                            <th className="right aligned">Qty</th>
+                            <th className="right aligned">Price</th>
+                            <th className="right aligned">Sub Total</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {[1, 2, 3].map((i) => {
+                            return (
+                              <tr key={"key" + i}>
+                                <td className="collapsing">
+                                  <i className="tags icon"></i> #9675372
+                                </td>
+                                <td>
+                                  <div className="ui two column grid">
+                                    <div className="ui three wide column">
+                                      <img
+                                        width="50"
+                                        height="50"
+                                        src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80"
+                                      />
+                                    </div>
+                                    <div className="ui twelve wide column">
+                                      Product Title
+                                      <br />
+                                      Vendor: Product Vendor
+                                    </div>
+                                  </div>
+                                </td>
+                                <td className="right aligned">5</td>
+                                <td className="right aligned">$25.25</td>
+                                <td className="right aligned"> $125.25</td>
+                              </tr>
+                            );
+                          })}
+                        </tbody>
+                        <tfoot className="full-width">
+                            <tr>
+                              <th>
+                                <b>Total</b>
+                              </th>
+                              <th colSpan="4" className="right aligned">
+                                <b>$125.25</b>
+                              </th>
+                            </tr>
+                          </tfoot>
+                      </table>
+                    </div>
+
+                    <br />
+                  </div>
+                );
+              })}
             </div>
-            <br />      
+            <br />
           </div>
         </div>
       </div>
