@@ -58,18 +58,31 @@ export default function SignUpPage() {
         style={{ paddingTop: 40, paddingBottom: 40 }}
       >
         <div className="ui top attached header">
-            <i className="signup icon"></i>
-            <div className="content">Sign Up</div>
+          <i className="signup icon"></i>
+          <div className="content">Sign Up</div>
         </div>
-        <div className="ui placeholder attached segment">
+        <div className="ui attached segment">
           <div className="ui two column very relaxed stackable grid">
             <div className="column">
               <div className="ui form">
+                <div className="two fields">
+                  <div className="field">
+                    <label>First Name</label>
+                    <div className="ui input">
+                      <input type="text" placeholder="Username" />
+                    </div>
+                  </div>
+                  <div className="field">
+                    <label>Last Name</label>
+                    <div className="ui input">
+                      <input type="text" placeholder="Username" />
+                    </div>
+                  </div>
+                </div>
                 <div className="field">
-                  <label>First Name</label>
+                  <label>Email</label>
                   <div className="ui left icon input">
-                    <input type="text" placeholder="Username" />
-                    <i className="user icon"></i>
+                    <input type="text" placeholder="your@email.com" />
                   </div>
                 </div>
                 <div className="field">
@@ -83,9 +96,12 @@ export default function SignUpPage() {
               </div>
             </div>
             <div className="middle aligned column">
-              <div className="ui big button">
-                <i className="lock icon"></i>
-                Login
+              <div className="ui center aligned basic segment">
+                <h4>Already Have an account ? </h4>
+                <div className="ui big button">
+                  <i className="lock icon"></i>
+                  Login
+                </div>
               </div>
             </div>
           </div>
