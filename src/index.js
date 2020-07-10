@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 
 // semantic.min.css offline version
 import 'semantic-ui-css/semantic.min.css';
+// custom css
+import './css/admin/style.css';
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';

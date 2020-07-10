@@ -11,7 +11,8 @@ import CartPage from './Pages/CartPage';
 
 // admin screens
 import OrderScreen from './Admin/OrderScreen';
+import Dashboard from './Admin/Dashboard';
 
 export default function App() {
-  return (<CartPage />);
+  return (<Dashboard />);
 }
