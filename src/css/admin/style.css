@@ -54,3 +54,7 @@
   max-height: calc(100% - 40) !important;
   height: calc(100% - 40) !important;
 }
+
+.pusher {
+  background: #fff!important;
+}
