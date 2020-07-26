@@ -1,5 +1,6 @@
 import thunk from "redux-thunk";
-import { compose, applyMiddleware } from "redux";
+import { compose, applyMiddleware, createStore } from "redux";
+import rootReducer from './reducers/rootReducer';
 
 const initialState = {
   products: [],
@@ -11,7 +12,7 @@ const composeEnhancer =
   compose;
 
 const store = createStore(
-  reducer,
+  rootReducer,
   initialState,
   composeEnhancer(applyMiddleware(thunk))
 );
