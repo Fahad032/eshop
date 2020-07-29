@@ -13,7 +13,7 @@ export default function Sidebar() {
           <Link to="/products" className="item">
             Products List
           </Link>
-          <Link to="/product/create" className="item">
+          <Link to="/products/create" className="item">
             Add Product
           </Link>
         </div>
