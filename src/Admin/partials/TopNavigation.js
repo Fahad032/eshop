@@ -4,16 +4,16 @@ export default function TopNavigation() {
   return (
     <div className="ui inverted top fixed menu">
       <div className="ui left inverted borderless menu">
-        <a className="item">
+        <a className="item" href="/dashboard">
           <i className="tachometer alternate icon"></i> Eshop Dashboard
           {/* <i className="bars icon"></i> */}
         </a>
       </div>
       <div className="right menu">
-        <a className="item">
+        <span className="item">
           <i className="bell icon"></i>
-        </a>
-        <a className="ui pointing dropdown link item">
+        </span>
+        <div className="ui pointing dropdown link item">
           <i className="user circle icon"></i>
           <i className="dropdown icon"></i>
           <div className="menu">
@@ -21,7 +21,7 @@ export default function TopNavigation() {
             <div className="item">Profile</div>
             <div className="item">Logout</div>
           </div>
-        </a>
+        </div>
       </div>
     </div>
   );
