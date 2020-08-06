@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 //import thunk from 'redux-thunk';
 
 import store from './store';
-
+import ProtectedRoute from './Middleware/ProtectedRoute';
 
 // import pages
 // import HomePage from "./Pages/HomePage";
@@ -27,9 +27,9 @@ export default function App() {
     <Provider store={store}>
       <BrowserRouter>
         <Switch>
-          <Route path="/dashboard">
+          <ProtectedRoute  path="/dashboard" Component={Dashboard}>
             <Dashboard />
-          </Route>
+          </ProtectedRoute>
           <Route path="/products/create">
             <AddProduct />
           </Route>

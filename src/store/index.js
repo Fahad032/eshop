@@ -4,6 +4,7 @@ import rootReducer from './reducers/rootReducer';
 
 const initialState = {
   products: [],
+  auth: null
 };
 
 const composeEnhancer =
