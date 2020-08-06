@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import AdminLayout from "../../layouts/AdminLayout";
-// import EditProduct from "./EditProduct";
+import EditProduct from "./EditProduct";
 import { useDispatch, useSelector } from "react-redux";
 
 import {
@@ -18,44 +18,21 @@ export default function Index() {
 
   // EDIT PRODUCT
   const [product, setProduct] = useState({});
-  const [title, setTitle] = useState("");
-  const [price, setPrice] = useState(0);
-  const [stock, setStock] = useState(0);
-  const [updatedImage, setUpdatedImage] = useState({});
   const [editMode, setEditMode] = useState(false);
 
   const editProduct = (product) => {
     setProduct(product);
-    setTitle(product.title);
-    setPrice(product.price);
-    setStock(product.stock);
     setEditMode(true);
   };
 
-  // Probably in diff component
-  const handleUpload = (e) => {
-    const image = e.target.files[0];
-    setUpdatedImage(image);
+  const handleUpdate = (data) => {
+    dispatch(updateProduct(data, products));
+    setEditMode(isLoading);
+    setProduct({});
   };
 
-  const handleUpdate = (e) => {
-    e.preventDefault();
-
-    const updatedProduct = {
-      ...product,
-      title: title,
-      price: price,
-      stock: stock,
-    };
-    const formData = new FormData();
-    formData.append('image', updatedImage);
-
-    for(let key in updatedProduct){
-      formData.append(key, updatedProduct[key]);
-    }
-
-    dispatch(updateProduct(formData, products));
-    setEditMode(isLoading);
+  const cancelEdit = () => {
+    setEditMode(false);
   };
 
   const deleteProduct = async (product) => {
@@ -142,66 +119,13 @@ export default function Index() {
         </div>
       )}
 
-      {/* TRY product && <EditProduct product={product} /> */}
-
       {/** EDIT PRODUCT */}
-
-      {product && editMode && (
-        <div className="ui basic segment" style={{ marginTop: 50 }}>
-          <h1>
-            Edit Product
-            <Link to="/products" className="ui gray button">
-              Back
-            </Link>
-          </h1>
-          <div className="ui form">
-            <form>
-              <div className="field">
-                <label>Product Name:</label>
-                <input
-                  name="title"
-                  value={title}
-                  onChange={(e) => setTitle(e.target.value)}
-                  placeholder="Product title"
-                />
-              </div>
-              <div className="field">
-                <label>Price:</label>
-                <input
-                  name="price"
-                  value={price}
-                  onChange={(e) => setPrice(e.target.value)}
-                  placeholder="10"
-                />
-              </div>
-              <div className="field">
-                <label>In Stock:</label>
-                <input
-                  name="stock"
-                  value={stock}
-                  placeholder="200"
-                  onChange={(e) => setStock(e.target.value)}
-                />
-              </div>
-
-              <img src={product.image_url} alt={product.title} />
-              <div className="field">
-                <label>Product Image:</label>
-                <input
-                  type="file"
-                  name="product-image"
-                  placeholder="Upload Image"
-                  onChange={handleUpload}
-                />
-              </div>
-              <div className="field">
-                <button className="ui primary button" onClick={handleUpdate}>
-                  Save
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
+      {editMode && (
+        <EditProduct
+          product={product}
+          handleUpdate={handleUpdate}
+          cancelEdit={cancelEdit}
+        />
       )}
     </AdminLayout>
   );
