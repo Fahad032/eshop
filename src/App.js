@@ -11,7 +11,7 @@ import store from './store';
 // import HomePage from "./Pages/HomePage";
 // import ProductDetails from './Pages/ProductDetailsPage';
 // import OrderPage from './Pages/OrderPage';
-// import LoginPage from './Pages/LoginPage';
+import LoginPage from './Pages/LoginPage';
 // import SignUpPage from './Pages/SignUpPage';
 // import CheckoutPage from './Pages/CheckoutPage';
 // import CartPage from './Pages/CartPage';
@@ -35,6 +35,9 @@ export default function App() {
           </Route>
           <Route path="/products">
             <ProductList />
+          </Route>
+          <Route path="/login">
+            <LoginPage />
           </Route>
           {/* <Route path="/" exact>
           <HomePage></HomePage>
