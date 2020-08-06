@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Provider } from "react-redux";
+//import { createStore, applyMiddleware, compose } from "redux";
+//import thunk from 'redux-thunk';
 
-function App() {
+import store from './store';
+
+
+// import pages
+// import HomePage from "./Pages/HomePage";
+// import ProductDetails from './Pages/ProductDetailsPage';
+// import OrderPage from './Pages/OrderPage';
+// import LoginPage from './Pages/LoginPage';
+// import SignUpPage from './Pages/SignUpPage';
+// import CheckoutPage from './Pages/CheckoutPage';
+// import CartPage from './Pages/CartPage';
+
+// admin screens
+// import OrderScreen from './Admin/OrderScreen';
+import Dashboard from "./Admin/Dashboard";
+import ProductList from "./Admin/Product/Index";
+import AddProduct from "./Admin/Product/AddProduct";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/dashboard">
+            <Dashboard />
+          </Route>
+          <Route path="/products/create">
+            <AddProduct />
+          </Route>
+          <Route path="/products">
+            <ProductList />
+          </Route>
+          {/* <Route path="/" exact>
+          <HomePage></HomePage>
+        </Route> */}
+        </Switch>
+      </BrowserRouter>
+    </Provider>
   );
 }
-
-export default App;

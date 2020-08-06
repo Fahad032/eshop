@@ -1,0 +1,60 @@
+.number-highlights {
+  font-size: 70px;
+  font-weight: bold;
+  display: block;
+  padding: 15px;
+}
+
+.red-text {
+  color: #db2828 !important;
+}
+.orange-text {
+  color: #f2711c !important;
+}
+.yellow-text {
+  color: #fbbd08 !important;
+}
+
+.olive-text {
+  color: #b5cc18 !important;
+}
+
+.green-text {
+  color: #21ba45 !important;
+}
+
+.teal-text {
+  color: teal !important;
+}
+
+.blue-text {
+  color: #2185d0 !important;
+}
+
+.violet-text {
+  color: #6435c9 !important;
+}
+
+.purple-text {
+  color: #a333c8 !important;
+}
+
+.pink-text {
+  color: #e03997 !important;
+}
+
+.brown-text {
+  color: #a5673f !important;
+}
+
+/*Dashboard Frame*/
+
+#sidebar {
+  top: 40px;
+  max-height: calc(100% - 40) !important;
+  height: calc(100% - 40) !important;
+}
+
+.pusher {
+  background: #fff!important;
+}
