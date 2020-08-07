@@ -2,6 +2,7 @@ import {
     USER_LOGIN_REQUEST,
     USER_LOGIN_SUCCESS,
     USER_LOGIN_FAILED,
+    USER_LOGOUT_SUCCESS,
 } from './../actions/actionTypes';
 
 const authReducer = (state = null, action) => {
@@ -15,6 +16,11 @@ const authReducer = (state = null, action) => {
         isLoading: false,
         auth: action.payload
       };
+    case USER_LOGOUT_SUCCESS:
+      return {
+        isLoading: false,
+        auth: null
+      };  
     default:
       return state;
   }
