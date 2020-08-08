@@ -55,7 +55,7 @@ export default function Index() {
         >
           <h1 className="ui left header">Products</h1>
           <div className="ui right floated">
-            <Link to="/products/create" className="ui primary button">
+            <Link to="/admin/products/create" className="ui primary button">
               Add Product
             </Link>
           </div>

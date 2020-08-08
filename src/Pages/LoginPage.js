@@ -21,7 +21,7 @@ export default function LoginPage() {
       password: password
     }));
     
-    history.push('/dashboard');
+    history.push('/admin/dashboard');
 
   };
 

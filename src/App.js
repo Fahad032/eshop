@@ -4,14 +4,14 @@ import { Provider } from "react-redux";
 //import { createStore, applyMiddleware, compose } from "redux";
 //import thunk from 'redux-thunk';
 
-import store from './store';
-import ProtectedRoute from './Middleware/ProtectedRoute';
+import store from "./store";
+import ProtectedRoute from "./Middleware/ProtectedRoute";
 
 // import pages
 import HomePage from "./Pages/HomePage";
-// import ProductDetails from './Pages/ProductDetailsPage';
+import ProductDetails from "./Pages/ProductDetailsPage";
 // import OrderPage from './Pages/OrderPage';
-import LoginPage from './Pages/LoginPage';
+import LoginPage from "./Pages/LoginPage";
 // import SignUpPage from './Pages/SignUpPage';
 // import CheckoutPage from './Pages/CheckoutPage';
 // import CartPage from './Pages/CartPage';
@@ -27,21 +27,31 @@ export default function App() {
     <Provider store={store}>
       <BrowserRouter>
         <Switch>
-          <ProtectedRoute  path="/dashboard">
+        {/* ADMIN ROUTES */}
+          <ProtectedRoute path="/admin/dashboard">
             <Dashboard />
           </ProtectedRoute>
-          <Route path="/products/create">
+          <Route path="/admin/products/create">
             <AddProduct />
           </Route>
-          <Route path="/products">
+          <Route path="/admin/products">
             <ProductList />
           </Route>
+
+
+          {/* PUBLIC ROUTES */}
           <Route path="/login">
             <LoginPage />
           </Route>
           <Route path="/" exact>
-          <HomePage></HomePage>
-        </Route>
+            <HomePage></HomePage>
+          </Route>
+          <Route path="/products/:id" exact>
+            <HomePage></HomePage>
+          </Route>
+
+          {/* USER SPECIFIC ROUTES i.e: userOrder / Account / Portfolio page */}
+
         </Switch>
       </BrowserRouter>
     </Provider>

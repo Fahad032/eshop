@@ -35,7 +35,7 @@ export default function AddProduct() {
       <div className="ui basic segment" style={{ marginTop: 50 }}>
         <h1>
           New Product
-          <Link to="/products" className="ui gray button">
+          <Link to="/admin/products" className="ui gray button">
             Back
           </Link>
         </h1>
