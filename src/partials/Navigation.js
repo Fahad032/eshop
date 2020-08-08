@@ -5,7 +5,7 @@ export default function Navigation() {
 
 
   useEffect(() => {
-    console.log(isAuthenticated());
+   // console.log(isAuthenticated());
   }, []);
 
   return (
