@@ -9,7 +9,7 @@ import Cookie from 'js-cookie';
 export const isAuthenticated = () => {
     // return if the user is authenticated  or not
     const isAuthenticated = Cookie.getJSON('user');
-    console.log(isAuthenticated);
+    // console.log(isAuthenticated);
     // TODO: we will rely on store `auth` value, 
     // so need to figure out a way to ensure that auth value reflects with the changes
     //dispatch()

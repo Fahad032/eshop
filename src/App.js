@@ -8,7 +8,7 @@ import store from './store';
 import ProtectedRoute from './Middleware/ProtectedRoute';
 
 // import pages
-// import HomePage from "./Pages/HomePage";
+import HomePage from "./Pages/HomePage";
 // import ProductDetails from './Pages/ProductDetailsPage';
 // import OrderPage from './Pages/OrderPage';
 import LoginPage from './Pages/LoginPage';
@@ -39,9 +39,9 @@ export default function App() {
           <Route path="/login">
             <LoginPage />
           </Route>
-          {/* <Route path="/" exact>
+          <Route path="/" exact>
           <HomePage></HomePage>
-        </Route> */}
+        </Route>
         </Switch>
       </BrowserRouter>
     </Provider>
