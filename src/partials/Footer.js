@@ -8,16 +8,16 @@ export default function Footer() {
           <div className="three wide column">
             <h4 className="ui inverted header">Group 1</h4>
             <div className="ui inverted link list">
-              <a href="#" className="item">
+              <a href="/home" className="item">
                 Link One
               </a>
-              <a href="#" className="item">
+              <a href="/home" className="item">
                 Link Two
               </a>
-              <a href="#" className="item">
+              <a href="/home" className="item">
                 Link Three
               </a>
-              <a href="#" className="item">
+              <a href="/home" className="item">
                 Link Four
               </a>
             </div>
@@ -25,16 +25,16 @@ export default function Footer() {
           <div className="three wide column">
             <h4 className="ui inverted header">Group 2</h4>
             <div className="ui inverted link list">
-              <a href="#" className="item">
+              <a href="/home" className="item">
                 Link One
               </a>
-              <a href="#" className="item">
+              <a href="/home" className="item">
                 Link Two
               </a>
-              <a href="#" className="item">
+              <a href="/home" className="item">
                 Link Three
               </a>
-              <a href="#" className="item">
+              <a href="/home" className="item">
                 Link Four
               </a>
             </div>
@@ -42,16 +42,16 @@ export default function Footer() {
           <div className="three wide column">
             <h4 className="ui inverted header">Group 3</h4>
             <div className="ui inverted link list">
-              <a href="#" className="item">
+              <a href="/home" className="item">
                 Link One
               </a>
-              <a href="#" className="item">
+              <a href="/home" className="item">
                 Link Two
               </a>
-              <a href="#" className="item">
+              <a href="/home" className="item">
                 Link Three
               </a>
-              <a href="#" className="item">
+              <a href="/home" className="item">
                 Link Four
               </a>
             </div>

@@ -26,7 +26,7 @@ export default function HighlighterCard(props) {
         <div className={applicableContentClass}>{cardContent || "Default"}</div>
       </div>
       <div className="extra content">
-        <Link to={linkUrl}>
+        <Link to={linkUrl || '/dashboard'}>
           <button className="ui primary fluid button">
             {linkLabel || "Default View"}
           </button>
