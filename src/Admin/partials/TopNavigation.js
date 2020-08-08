@@ -39,15 +39,15 @@ export default function TopNavigation() {
           <i className="user circle icon"></i> Jhon Doe
           <i className="dropdown icon"></i>
           <div className="menu">
-            <a className="item">
+            <a className="item" href="/settings">
               <i className="settings icon"></i> Account Settings
             </a>
-            <a className="item">
+            <a className="item" href="/profile">
               <i className="user outline icon"></i> Profile
             </a>
-            <a className="item" onClick={logout}>
+            <span className="item" onClick={logout}>
               <i className="logout icon"></i> Logout
-            </a>
+            </span>
           </div>
         </div>
       </div>

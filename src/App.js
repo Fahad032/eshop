@@ -27,7 +27,7 @@ export default function App() {
     <Provider store={store}>
       <BrowserRouter>
         <Switch>
-          <ProtectedRoute  path="/dashboard" Component={Dashboard}>
+          <ProtectedRoute  path="/dashboard">
             <Dashboard />
           </ProtectedRoute>
           <Route path="/products/create">

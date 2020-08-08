@@ -2,7 +2,7 @@ import Cookie from 'js-cookie';
 import { 
     USER_LOGIN_REQUEST,
     USER_LOGIN_SUCCESS,
-    USER_LOGIN_FAILED,
+   // USER_LOGIN_FAILED,
 } from './actionTypes';
 import axios from 'axios';
 
