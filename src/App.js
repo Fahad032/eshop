@@ -9,7 +9,6 @@ import ProtectedRoute from "./Middleware/ProtectedRoute";
 
 // import pages
 import HomePage from "./Pages/HomePage";
-import ProductDetails from "./Pages/ProductDetailsPage";
 // import OrderPage from './Pages/OrderPage';
 import LoginPage from "./Pages/LoginPage";
 // import SignUpPage from './Pages/SignUpPage';
@@ -46,9 +45,9 @@ export default function App() {
           <Route path="/" exact>
             <HomePage></HomePage>
           </Route>
-          <Route path="/products/:id" exact>
-            <HomePage></HomePage>
-          </Route>
+          {/* <Route path="/products/:id" exact>
+            <ProductDetailsComponent></ProductDetailsComponent>
+          </Route> */}
 
           {/* USER SPECIFIC ROUTES i.e: userOrder / Account / Portfolio page */}
 
